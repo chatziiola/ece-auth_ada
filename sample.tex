@@ -1,0 +1,65 @@
+% !TEX program = xelatex
+
+% Set up document layout
+\usepackage{geometry}
+\geometry{
+  margin=1.5cm,
+  includeheadfoot
+}
+
+% Set up fonts
+\usepackage{fontspec}
+\setmainfont{Avenir Next}
+\setmonofont{Avenir Next}
+\newfontfamily\greekfont{Avenir Next}
+
+% Set up colors
+\usepackage{xcolor}
+\definecolor{myblue}{RGB}{19,64,140}
+\definecolor{linkblue}{RGB}{19,64,140}
+\definecolor{mygray}{RGB}{130,130,130}
+\definecolor{myblack}{RGB}{0,0,0}
+
+% Set up hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=linkblue,
+  filecolor=linkblue,
+  urlcolor=linkblue,
+}
+
+% Set up headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{myblue}{\rightmark}}
+\fancyfoot[C]{\textcolor{myblack}{\thepage}}
+
+
+% Setup verbatim
+\usepackage{mdframed}
+\usepackage{verbatim}
+
+\surroundwithmdframed[
+  hidealllines=true,
+  backgroundcolor=gray!10,
+  innerleftmargin=2pt,
+  innerrightmargin=2pt,
+  innertopmargin=2pt,
+  innerbottommargin=2pt,
+  outertopmargin=2pt,
+  outerbottommargin=2pt
+]{verbatim}
+
+% Set up section/subsection/chapter titles
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{myblue}}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{myblue}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\color{myblue}}{\thesubsubsection}{1em}{}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{myblue}}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
