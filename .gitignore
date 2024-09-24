@@ -1,1 +1,7 @@
 *ltximg*
+*/node_modules/*
+*_mint*
+*.aux
+*.log
+*DS_Store
+*.out
