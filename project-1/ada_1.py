@@ -20,7 +20,6 @@ def candidateWinsTheProvince(myvector, provincepollsize):
 
 
 # For every line (electional province)
-
 def o_squared_complexity_algorithm():
     "First solution, non-optimized, to the given problem"
     number_of_provinces = len(data_matrix)
